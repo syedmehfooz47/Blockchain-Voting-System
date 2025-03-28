@@ -11,7 +11,7 @@ window.addEventListener('load', async () => {
             const web3 = new Web3(window.ethereum);
             
             // Contract Address and ABI
-            const contractAddress = '0xE3a7E26524A69620D68Ef6e479928Bae83B9F576';
+            const contractAddress = '(contractaddress)';
             const contractABI = [
                 {
                     "inputs": [{ "internalType": "string[]", "name": "candidateNames", "type": "string[]" }],
