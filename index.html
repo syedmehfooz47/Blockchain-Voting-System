@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Voting System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Poppins and Westmeath (if available) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Poppins+Italic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <h1>Blockchain Voting System</h1>
+            </div>
+        </nav>
+        <section class="content">
+            <!-- Updated heading text -->
+            <h2>SECURE, TRANSPARENT, DECENTRALIZED VOTING POWERED BY BLOCKCHAIN</h2>
+            
+            <!-- Voting Box -->
+            <div id="vote-box" class="vote-box">
+                <h3>Choose Your Candidate</h3>
+                <div id="vote-container" class="vote-row">
+                    <button onclick="vote(0)">Vote for Zeeshan Yalakpalli</button>
+                    <button onclick="vote(1)">Vote for Syed Mehfooz C S</button>
+                    <button onclick="vote(2)">Vote for Ayesha Siddiqua</button>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <div id="status"></div>
+
+            <!-- Live Results Box -->
+            <div id="live-results-box" class="live-results-box">
+                <h3>Live Results</h3>
+                <ul id="results-list"></ul>
+            </div>
+        </section>
+    </header>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Blockchain Voting System. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Importing web3.js library -->
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

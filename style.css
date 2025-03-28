@@ -1,0 +1,174 @@
+/* General Reset and Font Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('images/wallpaperflare.com_wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Center Content Container */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Logo Styling */
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Main Heading (Tagline) */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic; 
+    font-weight: 600; 
+    font-size: 1.8rem; 
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+    color: #ffffff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); 
+}
+
+/* Voting Box Styling */
+.vote-box, .live-results-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Voting Buttons */
+.vote-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+button {
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background: linear-gradient(57deg, #00c6a7, #1e4d92);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out, box-shadow 0.2s ease;
+    width: 100%;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Hover Effect: Slight Lift */
+button:hover {
+    background: linear-gradient(57deg, #1e4d92, #00c6a7);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Click Effect: Press Down */
+button:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(57deg, #003b58, #007b6f);
+}
+
+/* Status Message */
+#status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+/* Live Results Styling */
+#results-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+ul li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* Footer Styling */
+.footer {
+    position: absolute;
+    bottom: -5cm; /* Initially place it further down */
+    width: 100%;
+    text-align: center;
+    padding: 40px; /* Increased padding to double the size */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* 20% more transparent */
+    border-top: 1px solid #ffffff;
+    transition: bottom 0.3s ease;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Scroll effect: sticky footer after scroll */
+.footer.sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vote-box, .live-results-box {
+        padding: 20px;
+    }
+    button {
+        padding: 12px;
+    }
+    h2 {
+        font-size: 1.4rem; /* Smaller size on mobile */
+    }
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+}
