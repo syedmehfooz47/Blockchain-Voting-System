@@ -6,7 +6,7 @@ A **secure, transparent, and decentralized** voting system powered by **blockcha
 
 ## 🌐 Live Demo
 👉 Check out the live demo here:
-🔗 [Live Demo](https://syedmehfooz47.github.io/Blockchain-Voting-System/)
+🔗 [Live Demo](https://syedmehfooz47.github.io/Blockchain-Voting-System/){:target="_blank"}
 
 ---
 
@@ -31,10 +31,10 @@ A **secure, transparent, and decentralized** voting system powered by **blockcha
 ## 📥 Installation & Setup
 
 ### ✅ Prerequisites
-- Install [MetaMask](https://metamask.io/) browser extension. 🦊
-- Install [Node.js](https://nodejs.org/) and npm. 📦
-- Install [Ganache](https://trufflesuite.com/ganache/) for local blockchain testing. 🏗️
-- Install [Truffle](https://www.trufflesuite.com/) for smart contract deployment. 🔧
+- Install [MetaMask](https://metamask.io/){:target="_blank"} browser extension. 🦊
+- Install [Node.js](https://nodejs.org/){:target="_blank"} and npm. 📦
+- Install [Ganache](https://trufflesuite.com/ganache/){:target="_blank"} for local blockchain testing. 🏗️
+- Install [Truffle](https://www.trufflesuite.com/){:target="_blank"} for smart contract deployment. 🔧
 
 ### 📌 Clone the Repository
 ```sh
@@ -75,7 +75,7 @@ blockchain-voting-system/
 ## 🌍 Deployment
 
 🚀 Deploy on an Ethereum testnet (e.g., **Goerli, Sepolia**).  
-🔗 Use [Infura](https://infura.io/) for remote Ethereum node access.  
+🔗 Use [Infura](https://infura.io/){:target="_blank"} for remote Ethereum node access.  
 ✏️ Update `contractAddress` in `script.js` after deployment.  
 
 ---
@@ -96,10 +96,9 @@ blockchain-voting-system/
 
 ## 👥 Authors
 
-👨‍💻 **[Syed Mehfooz C S](https://github.com/syedmehfooz47)** & **[Zeeshan Yalakapalli](https://github.com/zeeshan8088)**  
-🔗 [GitHub Repo](https://github.com/syedmehfooz47/Blockchain-Voting-System)  
+👨‍💻 **[Syed Mehfooz C S](https://github.com/syedmehfooz47){:target="_blank"}** & **[Zeeshan Yalakapalli](https://github.com/zeeshan8088){:target="_blank"}**  
+🔗 [GitHub Repo](https://github.com/syedmehfooz47/Blockchain-Voting-System){:target="_blank"}  
 
 ---
 
 🚀 Happy Voting! 🗳️🎉
-
