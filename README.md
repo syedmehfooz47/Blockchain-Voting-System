@@ -4,6 +4,12 @@ A **secure, transparent, and decentralized** voting system powered by **blockcha
 
 ---
 
+## 🌐 Live Demo
+👉 Check out the live demo here:
+🔗 https://syedmehfooz47.github.io/Blockchain-Voting-System/
+
+---
+
 ## 🚀 Features
 
 🔹 **Decentralized** – Ensures a tamper-proof voting system using blockchain.  
