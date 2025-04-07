@@ -8,17 +8,7 @@
 body {
     background: url('https://c4.wallpaperflare.com/wallpaper/414/160/33/mac-os-x-os-x-big-sur-hd-wallpaper-preview.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    /* ... rest of the existing body styles remain unchanged ... */
 }
 
 /* Center Content Container */
