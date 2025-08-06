@@ -5,64 +5,112 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-glow: rgba(13, 222, 191, 0.55);
+    --secondary-glow: rgba(9, 97, 233, 0.55);
+    --text-color: #f0f0f0;
+    --text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    --border-color: rgba(255, 255, 255, 0.2);
+    --background-blur: 10px;
+}
+
 body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
     background: url('https://c4.wallpaperflare.com/wallpaper/414/160/33/mac-os-x-os-x-big-sur-hd-wallpaper-preview.jpg') no-repeat center center fixed;
     background-size: cover;
-    /* ... rest of the existing body styles remain unchanged ... */
-}
-
-/* Center Content Container */
-.content {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
+    padding: 40px 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header and Logo Styling */
+.header {
+    text-align: center;
     width: 100%;
 }
 
-/* Logo Styling */
 .logo h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 40px;
-}
-
-/* Main Heading (Tagline) */
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-style: italic; 
-    font-weight: 600; 
-    font-size: 1.8rem; 
-    margin-bottom: 20px;
-    text-transform: uppercase; 
     color: #ffffff;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); 
+    text-shadow: 0 0 15px var(--primary-glow), 0 0 25px var(--secondary-glow), 0 0 40px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
 }
 
-/* Voting Box Styling */
-.vote-box, .live-results-box {
+.header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-shadow: var(--text-shadow);
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* Main Content Layout */
+.content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 30px;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Glassmorphism Card Style */
+.vote-box, .live-results-box {
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(var(--background-blur));
+    -webkit-backdrop-filter: blur(var(--background-blur));
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     width: 100%;
     max-width: 500px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    min-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.vote-box:hover, .live-results-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
 
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px var(--primary-glow);
 }
 
-/* Voting Buttons */
+/* Candidate Buttons */
 .vote-row {
     display: flex;
     flex-direction: column;
@@ -71,94 +119,152 @@ h3 {
 }
 
 button {
-    padding: 15px;
-    font-family: 'Open Sans', sans-serif;
+    padding: 15px 20px;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 1.2rem;
-    background: linear-gradient(57deg, #00c6a7, #1e4d92);
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, rgba(9, 97, 233, 0.7), rgba(13, 222, 191, 0.7));
     color: white;
-    border: none;
-    border-radius: 8px;
+    border: 1px solid transparent;
+    border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out, box-shadow 0.2s ease;
+    transition: all 0.3s ease;
     width: 100%;
     outline: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
-/* Hover Effect: Slight Lift */
 button:hover {
-    background: linear-gradient(57deg, #1e4d92, #00c6a7);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgba(9, 97, 233, 0.9), rgba(13, 222, 191, 0.9));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color);
 }
 
-/* Click Effect: Press Down */
 button:active {
-    transform: translateY(2px) scale(0.98);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(57deg, #003b58, #007b6f);
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Status Message */
-#status {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #ffd700;
+button:disabled {
+    cursor: not-allowed;
+    background: rgba(80, 80, 80, 0.5);
+    transform: none;
+    box-shadow: none;
 }
 
 /* Live Results Styling */
 #results-list {
     list-style: none;
     padding: 0;
-    margin-top: 15px;
+    width: 100%;
 }
 
-ul li {
-    font-family: 'Open Sans', sans-serif;
+#results-list li {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
+    font-weight: 400;
+    padding: 12px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border-left: 4px solid transparent;
 }
+
+#results-list li:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-left-color: var(--primary-glow);
+}
+
+/* Status Message */
+#status-container {
+    margin-top: 10px;
+    min-height: 30px;
+    text-align: center;
+}
+#status {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffd700; /* Gold color for high visibility */
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    transition: opacity 0.3s ease;
+}
+
+/* Loading Overlay & Spinner */
+.hidden {
+    display: none !important;
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s ease-in-out infinite;
+}
+
+#loading-overlay p {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 
 /* Footer Styling */
 .footer {
-    position: absolute;
-    bottom: -5cm; /* Initially place it further down */
     width: 100%;
+    max-width: 1200px;
     text-align: center;
-    padding: 40px; /* Increased padding to double the size */
+    padding: 20px;
+    margin-top: 40px;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6); /* 20% more transparent */
-    border-top: 1px solid #ffffff;
-    transition: bottom 0.3s ease;
-}
-
-.footer p {
-    margin: 0;
-}
-
-/* Scroll effect: sticky footer after scroll */
-.footer.sticky {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--border-color);
+    border-radius: 15px 15px 0 0;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
     .vote-box, .live-results-box {
-        padding: 20px;
+        max-width: 600px;
     }
-    button {
-        padding: 12px;
-    }
-    h2 {
-        font-size: 1.4rem; /* Smaller size on mobile */
-    }
-    .logo h1 {
-        font-size: 2.5rem;
-    }
+}
+
+@media (max-width: 768px) {
+    body { padding: 20px 10px; }
+    .logo h1 { font-size: 2.8rem; }
+    .header h2 { font-size: 1.2rem; }
+    h3 { font-size: 1.6rem; }
+    .vote-box, .live-results-box { padding: 25px 20px; }
+    button { padding: 14px; font-size: 1rem; }
 }
