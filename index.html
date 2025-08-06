@@ -3,49 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blockchain Voting System</title>
+    <title>AuraVote - Decentralized Voting Platform</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for Poppins and Westmeath (if available) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Poppins+Italic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav>
+
+    <div class="main-container">
+        <header class="header">
             <div class="logo">
-                <h1>Blockchain Voting System</h1>
+                <h1>AuraVote</h1>
             </div>
-        </nav>
+            <h2>Secure, Transparent, Decentralized.</h2>
+        </header>
+        
         <section class="content">
-            <!-- Updated heading text -->
-            <h2>SECURE, TRANSPARENT, DECENTRALIZED VOTING POWERED BY BLOCKCHAIN</h2>
-            
-            <!-- Voting Box -->
             <div id="vote-box" class="vote-box">
-                <h3>Choose Your Candidate</h3>
+                <h3>Cast Your Ballot</h3>
                 <div id="vote-container" class="vote-row">
-                    <button onclick="vote(0)">Name 1</button>
-                    <button onclick="vote(1)">Name 2</button>
-                    <button onclick="vote(2)">Name 3</button>
-                </div>
+                    </div>
             </div>
 
-            <!-- Status -->
-            <div id="status"></div>
-
-            <!-- Live Results Box -->
             <div id="live-results-box" class="live-results-box">
-                <h3>Live Results</h3>
+                <h3>Live Election Results</h3>
                 <ul id="results-list"></ul>
             </div>
         </section>
-    </header>
+        
+        <div id="status-container">
+            <p id="status"></p>
+        </div>
+        
+        <div id="loading-overlay" class="hidden">
+            <div class="spinner"></div>
+            <p>Processing Transaction...</p>
+        </div>
+        
+    </div>
 
-    <!-- Footer Section -->
     <footer class="footer">
-        <p>&copy; 2024 Blockchain Voting System. All Rights Reserved.</p>
+        <p>&copy; 2025 AuraVote Platform. All Rights Reserved.</p>
     </footer>
 
-    <!-- Importing web3.js library -->
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
     <script src="script.js"></script>
 </body>
